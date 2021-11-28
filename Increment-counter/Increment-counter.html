@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Increment counter</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        </head>
+        <style>
+            body{
+                background-color: rgb(103, 103, 223);
+            } 
+           
+                .center {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 50%;
+                    position: absolute;
+                    top: 250px;
+                    left: 325px;
+            }
+            </style>
+            <body>
+              <div style="background-color: rgb(103, 103, 223);;width: 50%;height: 150px;" class="center">
+                
+                <div class="counter-container" style="float: left;">
+                    <i class="fa fa-coffee fa-3x" aria-hidden="true"></i>
+                    <div class="counter" data-target="4000" style="font-size: 70px;color: gold;"></div>
+                    <span style="font-size: 20px;">Project Completed</span>
+                   
+                    </div>
+                    
+                    <div class="counter-container" style="float:left;position: absolute;left:280px;">
+                        <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+                        <div class="counter" data-target="15000" style="font-size: 70px;color: gold;"></div>
+                        <span style="font-size: 20px;">Our Happy Clients</span>
+                       
+                        </div>
+                        
+                        <div class="counter-container" style="float: right;">
+                            <i class="fa fa-clipboard fa-3x" aria-hidden="true"></i>
+                            <div class="counter" data-target="500" style="font-size: 70px;color: gold;"></div>
+                            <span style="font-size: 20px;">OnGoing Projects</span>
+                           
+                            </div>
+                    
+                </div>
+
+            </body>
+            <script>
+                const counters = document.querySelectorAll('.counter');
+
+                counters.forEach((counter) => {
+                    counter.innerHTML = 0;
+                    
+                    const updateCounter = () => {
+
+                        const targetCount = +counter.getAttribute('data-target');
+
+                        const startingnumber = +counter.innerHTML;
+                        const incr = targetCount / 100;
+                        if(startingnumber < targetCount){
+                            counter.innerHTML = `${Math.round(startingnumber + incr) }`;
+                            setTimeout(updateCounter , 10);
+                        }else{
+                            counter.innerHTML = targetCount;
+                        }
+
+
+
+                    }
+                    updateCounter();
+                }
+
+                )
+
+                </script>
+    </html>

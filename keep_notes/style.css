@@ -1,0 +1,66 @@
+/* Button-arrow CSS: */
+.arrow {
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  position: relative;
+  line-height: 2.5em;
+  padding-left: 1em;
+  padding-right: 2em;
+  background: rgb(255, 255, 255);
+  color: black;
+ 
+}
+
+.arrow:after {
+  border-left: 20px solid rgb(255, 255, 255);
+}
+
+.arrow:after {
+  content: "";
+  position: absolute;
+  border-bottom: 20px solid transparent;
+  border-top: 20px solid transparent;
+  height: 0px;
+  width: 0px;
+  margin-right: -20px;
+  right: 0;
+}
+
+.arrow:hover, .arrow:active {
+  background: gold;
+  color: black;
+}
+
+.arrow:hover:after, .arrow:active:after {
+  border-left: 20px solid gold;
+}
+.note{
+
+    width: 300px;
+    height: 150px;
+    border: 0.5px solid #0a0a0a;
+    padding: 5px;
+    font-family: Tahoma, sans-serif;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    float:left;
+    background-color: white;
+    
+  }
+
+  textarea{
+    width: 280px;
+    height: 100px;
+    background-color: white;
+    border: none;
+  }
+
+.hidden{
+  display: none;
+}
+ 
+
+
